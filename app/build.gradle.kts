@@ -17,6 +17,10 @@ android {
         // Klucz z GitHub Secrets (zmienna środowiskowa w Actions). Może być pusty – wtedy wpisujesz go w aplikacji.
         val key = System.getenv("ANTHROPIC_API_KEY") ?: ""
         buildConfigField("String", "ANTHROPIC_API_KEY", "\"$key\"")
+        val gemini = System.getenv("GEMINI_API_KEY") ?: ""
+        buildConfigField("String", "GEMINI_API_KEY", "\"$gemini\"")
+        val tavus = System.getenv("TAVUS_API_KEY") ?: ""
+        buildConfigField("String", "TAVUS_API_KEY", "\"$tavus\"")
     }
 
     buildFeatures {
